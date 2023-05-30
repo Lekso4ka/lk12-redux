@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 
 import { delProduct } from "../../store/actions/productActions";
-
+import { addToBasket } from "../../store/actions/basketActions";
 const Product = ({
     name,
     price,
@@ -17,7 +17,11 @@ const Product = ({
         <td>{name}</td>
         <td>{price} ₽</td>
         <td>
-            <button>В корзину</button>
+            <button onClick={() => dispatch(addToBasket({
+                name, 
+                price, 
+                id
+            }))}>В корзину</button>
             {/* <button onClick={del}>Удалить</button> */}
             <button onClick={() => dispatch(delProduct(id))}>Удалить</button>
         </td>
