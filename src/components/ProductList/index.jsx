@@ -2,7 +2,7 @@ import {useSelector, useDispatch} from "react-redux";
 import Product from "./Product";
 
 const ProductList = () => {
-    const data = useSelector(state => state.product);
+    const data = useSelector(state => state.product.data);
     const dispatch = useDispatch();
 
     return <>

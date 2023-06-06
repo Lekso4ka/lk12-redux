@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../store/actions/productActions";
+// import { addProduct } from "../../store/actions/productActions";
+import { addProduct } from "../../storeRtk/reducers/productReducer";
 
 const Form = () => {
     const dispatch = useDispatch();

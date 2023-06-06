@@ -1,11 +1,9 @@
-import {useSelector, useDispatch} from "react-redux";
-import { sumResult } from "../../store/actions/basketActions";
+import {useSelector, } from "react-redux";
 
 import Row from "./Row";
 
 const Basket = () => {
-    const data = useSelector(state => state.basket);
-    const dispatch = useDispatch();
+    const data = useSelector(state => state.basket.value);
 
     return <>
         <h2>Товары в корзине</h2>

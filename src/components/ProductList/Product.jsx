@@ -1,7 +1,10 @@
 import { useDispatch } from "react-redux";
 
-import { delProduct } from "../../store/actions/productActions";
-import { addToBasket } from "../../store/actions/basketActions";
+// import { delProduct } from "../../store/actions/productActions";
+import { delProduct } from "../../storeRtk/reducers/productReducer";
+// import { addToBasket } from "../../store/actions/basketActions";
+import { addToBasket } from "../../storeRtk/reducers/basketReducer";
+
 const Product = ({
     name,
     price,

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { increment, decrement, delFromBasket } from "../../store/actions/basketActions";
+import { increment, decrement, delFromBasket } from "../../storeRtk/reducers/basketReducer";
 
 const Row = ({
     index,
