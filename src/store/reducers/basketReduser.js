@@ -15,10 +15,22 @@ const basketReducer = (state = initialState, action)=> {
                     return el
                 })
                 : [...state, {...data, cnt: 1}]
-        // case "SUM":
-        //     return state.reduce((acc, el) => {
-        //         return acc + el.cnt * el.price
-        //     }, 0)
+        case "INCREMENT":
+            return state.map(el => {
+                if (el.id === data) {
+                    el.cnt += 1;
+                }
+                return el
+            })
+        case "DECREMENT":
+            return state.map(el => {
+                if (el.id === data) {
+                    el.cnt -= 1;
+                }
+                return el
+            })
+        case "DEL_FROM_BASKET":
+            return state.filter(el => el.id !== data)
         default: return state;
     }
 }
